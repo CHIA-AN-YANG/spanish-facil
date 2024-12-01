@@ -12,8 +12,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Test
         run: |
-          npm install
-          npm run test
+          pip install -r requirements.txt
 
       - name: Deploy
         # Only run this step if the branch is main

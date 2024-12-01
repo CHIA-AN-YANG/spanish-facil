@@ -17,6 +17,7 @@ GENAI_API_KEY = os.getenv('GENAI_API_KEY')
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
 genai.configure(api_key=GENAI_API_KEY )
+
 model = genai.GenerativeModel("gemini-1.5-flash")
 response = model.generate_content("Explain how AI works")
 print(response.text)
